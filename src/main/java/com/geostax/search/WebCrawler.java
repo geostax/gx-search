@@ -93,9 +93,11 @@ public class WebCrawler {
 			Elements keywords = doc.select("meta[name=keywords]");
 			Elements description = doc.select("meta[name=description]");
 			Elements firstpublishedtime = doc.select("meta[name=firstpublishedtime]");
+			Elements lanmu = doc.select("meta[name=lanmu]");
 			String desc = "";
 			String kws = "";
 			String date = "";
+			String lanm="";
 			if (!description.isEmpty()) {
 				desc = description.first().attr("content").toString();
 			}
@@ -105,7 +107,10 @@ public class WebCrawler {
 			if (!firstpublishedtime.isEmpty()) {
 				date = firstpublishedtime.first().attr("content").toString();
 			}
-			writer.println(prefix + title + "|" + kws + "|" + desc + "|" + date);
+			if (!lanmu.isEmpty()) {
+				lanm = lanmu.first().attr("content").toString();
+			}
+			writer.println(prefix +lanm+" | "+ title + " | " + kws + " | " + desc + " | " + date);
 			return;
 		}
 
@@ -135,8 +140,12 @@ public class WebCrawler {
 
 		// new WebCrawler().crawl_map();
 		PrintWriter writer = new PrintWriter("output.txt");
+		new WebCrawler().crawl2("http://www.gov.cn/xinwen/lianbo/index.htm", "|", writer,"");
 		//new WebCrawler().crawl2("http://www.gov.cn/zhengce/zhuti/shuangchuang/index.htm", "|", writer,"");
-		new WebCrawler().crawl2("http://www.gov.cn/zhengce/wenjian/zhongyang.htm", "|", writer,"");
+		//new WebCrawler().crawl2("http://www.gov.cn/zhengce/wenjian/zhongyang.htm", "|", writer,"");
+		//new WebCrawler().crawl2("http://www.gov.cn/premier/meitibaodao.htm", "|", writer,"");
+		
+		
 		writer.close();
 	}
 }
