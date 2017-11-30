@@ -1,4 +1,4 @@
-package com.geostax.search;
+package com.geostax.search.dao;
 
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -140,9 +140,9 @@ public class WebCrawler {
 
 		// new WebCrawler().crawl_map();
 		PrintWriter writer = new PrintWriter("output.txt");
-		new WebCrawler().crawl2("http://www.gov.cn/xinwen/lianbo/index.htm", "|", writer,"");
+		//new WebCrawler().crawl2("http://www.gov.cn/xinwen/lianbo/index.htm", "|", writer,"");
 		//new WebCrawler().crawl2("http://www.gov.cn/zhengce/zhuti/shuangchuang/index.htm", "|", writer,"");
-		//new WebCrawler().crawl2("http://www.gov.cn/zhengce/wenjian/zhongyang.htm", "|", writer,"");
+		new WebCrawler().crawl2("http://www.gov.cn/zhengce/wenjian/zhongyang.htm", "|", writer,"");
 		//new WebCrawler().crawl2("http://www.gov.cn/premier/meitibaodao.htm", "|", writer,"");
 		
 		
