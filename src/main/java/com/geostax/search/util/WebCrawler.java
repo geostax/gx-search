@@ -1,4 +1,4 @@
-package com.geostax.search.dao;
+package com.geostax.search.util;
 
 import java.io.PrintWriter;
 import java.io.Writer;

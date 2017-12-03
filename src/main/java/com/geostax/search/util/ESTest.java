@@ -1,4 +1,4 @@
-package com.geostax.search.dao;
+package com.geostax.search.util;
 
 import java.net.InetAddress;
 import java.util.Date;

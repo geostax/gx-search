@@ -11,7 +11,7 @@
 <%
     String query = (String) request.getAttribute("query");
     List<Docs> list = (List<Docs>) request.getAttribute("docList");
-    int totalDoc = (int) request.getAttribute("totalDocs");
+    long totalDoc = (long) request.getAttribute("totalDocs");
     double time = Double.parseDouble(request.getAttribute("time").toString());
     int pageNow = (int) request.getAttribute("pageNow");
     int pageCount = (int) request.getAttribute("pageCount");

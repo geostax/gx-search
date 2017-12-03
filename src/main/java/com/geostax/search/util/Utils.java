@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.geostax.search.model;
+package com.geostax.search.util;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import com.geostax.search.model.Docs;
 
 import javax.xml.parsers.*;
 import java.io.File;
